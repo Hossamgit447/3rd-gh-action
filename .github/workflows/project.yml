@@ -16,9 +16,9 @@ jobs:
           
       - name: Run tests
         run: | 
-         npm run lint
-         npm run test
-         npm run build
+          npm run lint
+          npm run test
+          npm run build
 
       - name: Deploy application
         run: echo "Deploying application..."
