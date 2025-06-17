@@ -1,0 +1,16 @@
+name: Issue Action
+
+on:
+  issues:
+    types: [opened, edited, closed]
+
+jobs:
+  handle-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Handle Issue
+        run: echo "Issue event triggered! Issue number is ${{ github.event.issue.number }}"
